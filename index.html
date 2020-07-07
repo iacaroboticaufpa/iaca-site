@@ -65,7 +65,7 @@
     <section class="ftco-section ftco-no-pb ftco-partner">
     	<div class="container">
     		<div class="row">
-    			<div class="col-md-12 col-lg ftco-animate">
+    			<!-- <div class="col-md-12 col-lg ftco-animate">
     				<a href="#" class="partner d-flex justify-content-center"><img src="images/partner-1.png" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
     			<div class="col-md-12 col-lg ftco-animate">
@@ -79,7 +79,7 @@
     			</div>
     			<div class="col-md-12 col-lg ftco-animate">
     				<a href="#" class="partner d-flex justify-content-center"><img src="images/partner-5.png" class="img-fluid" alt="Colorlib Template"></a>
-    			</div>
+    			</div> -->
     		</div>
     	</div>
     </section>
@@ -502,7 +502,7 @@
       <div class="container justify-content-center mb-5">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2 class="mb-4">Contact Me</h2>
+            <h2 class="mb-4">Contato</h2>
             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
           </div>
         </div>
@@ -556,28 +556,44 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+            <form action="https://postmail.invotes.com/send" method="post" id="email_form" class="bg-light p-4 p-md-5 contact-form" >
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" name="extra_nome" class="form-control" placeholder="Nome"/>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" name="extra_email" class="form-control" placeholder="Email"/>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" name="subject" class="form-control" placeholder="Assunto"/>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="text" cols="30" rows="7" class="form-control" placeholder="Messagem"></textarea>
+			  </div>
+
+			  <input type="hidden" name="access_token" value="g1lhrye413su8071mucnren5" />  <!-- INSERIR AQUI O TOKEN DO IAÇA-->
+			  <input type="hidden" name="success_url" value="." />
+			  <input type="hidden" name="error_url" value="..?message=Email+could+not+be+sent.&isError=1" />
+
+			  <div class="form-group">
+                <input id="submit_form" type="submit" value="Enviar" class="btn btn-primary py-3 px-5"/>
               </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
+			</form>
+			
+			<script>
+				var submitButton = document.getElementById("submit_form");
+				var form = document.getElementById("email_form");
+				form.addEventListener("submit", function (e) {
+					setTimeout(function() {
+						submitButton.value = "Enviando...";
+						submitButton.disabled = true;
+					}, 1);
+				});
+			</script> 
           
           </div>
 
           <div class="col-md-6 d-flex">
-          	<div id="map" class="map"></div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.28114276342245!2d-48.452173322439215!3d-1.4738929910674978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48dca6a71f171%3A0x618b50955dfa7545!2sLEEC%20-%20Laborat%C3%B3rio%20de%20Engenharia%20El%C3%A9trica%20e%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1594163156635!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           	<!-- <div class="img" style="background-image: url(images/about.jpg);"></div> -->
           </div>
         </div>
@@ -588,10 +604,10 @@
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md">
+          <div class="col-sm">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">IAÇA</h2>
+              <p>Algum texto resumindo em poucas palavras o que e o iaça.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
 	              <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -599,7 +615,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md">
+          <div class="col-sm">
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
@@ -611,7 +627,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md">
+          <div class="col-sm">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Services</h2>
               <ul class="list-unstyled">
@@ -621,7 +637,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md">
+          <div class="col-sm">
             <div class="ftco-footer-widget mb-4">
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
