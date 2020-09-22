@@ -7954,7 +7954,7 @@ button.bg-dark:focus {
   text-align: right !important; }
 
 .text-center {
-  text-align: center !important; }
+  text-align: center !important;}
 
 @media (min-width: 576px) {
   .text-sm-left {
@@ -9083,6 +9083,11 @@ textarea.form-control {
     color: #fff; }
   .heading-section.heading-section-white p {
     color: rgba(255, 255, 255, 0.9); }
+   .heading-section.heading-section-white h4{
+     white-space: pre-wrap;
+     max-width: 860px;
+     text-align: center;
+   } 
 
 .img,
 .user-img {
