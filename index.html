@@ -148,7 +148,7 @@
 		</section>
 		
 		<div class="row container-project">
-			<div class="col-md-3 ">
+			<div class="col-md-4 ">
 				<div class="project ">
 					<div class="flipper">
 						<div class = "front">
@@ -176,7 +176,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-3 ">
+			<!-- <div class="col-md-3 ">
 				<div class="project ">
 					<div class="flipper">
 						<div class = "front">
@@ -202,9 +202,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="col-md-3 ">
+			<!-- <div class="col-md-3 ">
 				<div class="project ">
 					<div class="flipper">
 						<div class = "front">
@@ -232,9 +232,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		
-			<div class="col-md-3 ">
+			<div class="col-md-4">
 				<div class="project ">
 					<div class="flipper">
 						<div class = "front">
@@ -262,7 +262,7 @@
 				</div>
 			</div>
 					
-			<div class="col-md-3 ">
+			<div class="col-md-4 ">
 				<div class="project ">
 					<div class="flipper">
 						<div class = "front">
@@ -290,7 +290,7 @@
 				</div>
 			</div>
 					
-			<div class="col-md-3 ">
+			<div class="col-md-4 ">
 				<div class="project ">
 					<div class="flipper">
 						<div class = "front">
@@ -318,7 +318,7 @@
 				</div>
 			</div>
 					
-			<div class="col-md-3 ">
+			<div class="col-md-4 ">
 				<div class="project ">
 					<div class="flipper">
 						<div class = "front">
@@ -346,7 +346,7 @@
 				</div>
 			</div>
 	
-			<div class="col-md-3 ">
+			<div class="col-md-4 ">
 				<div class="project ">
 					<div class="flipper">
 						<div class = "front">
@@ -402,7 +402,7 @@
 						<input type="text" name="extra_nome" class="form-control" placeholder="Nome" required/>
 					</div>
 				<div class="form-group">
-					<input type="text" name="extra_email" class="form-control" placeholder="Email" required/>
+					<input type="email" name="extra_email" class="form-control" placeholder="Email" required/>
 				</div>
 				<div class="form-group">
 					<input type="text" name="subject" class="form-control" placeholder="Assunto" required/>
@@ -427,7 +427,8 @@
 						setTimeout(function() {
 							submitButton.value = "Enviando...";
 							submitButton.disabled = true;
-						}, 1);
+							swal('Email enviado!', 'Em breve entraremos em contato ;)', 'success');
+						}, 2);
 					});
 				</script> 
 			
@@ -489,9 +490,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 text-center ">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p ><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
@@ -506,6 +507,8 @@
 
 
   <script src="js/jquery.min.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
